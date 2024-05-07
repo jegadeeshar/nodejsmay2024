@@ -1,0 +1,15 @@
+{
+
+  "mongodb": {
+    "url": "mongodb+srv://admin:admin@atlascluster.mzdhwku.mongodb.net/lakshmanan"
+  },
+  "statusCode":{
+    "success": 200,
+    "created": 201,
+    "badRequest": 400,
+    "notAuthenticated": 401,
+    "notAuthorised": 403,
+    "logicError": 500
+
+  }
+}

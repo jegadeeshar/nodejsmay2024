@@ -1,0 +1,19 @@
+{
+  "swaggerDefinition": {
+    "info": {
+      "title": "Registration API POD1",
+      "version": "1.0.0",
+      "description": "Registration API POD1",
+      "contact": {
+        "name": "Lakshmanan"
+      },
+      "servers": [
+        "http://localhost:3200"
+      ]
+    }
+  },
+  "apis": [
+    "app.js",
+    "./routes/*.js"
+  ]
+}
