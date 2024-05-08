@@ -35,7 +35,11 @@ Schema({
         },
         message: props => `Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character.`,
       },
-    }
+    },
+    createDate: {
+      type: Date,
+      default: Date.now // Set default value to current date
+   }
 })
 
 module.exports = mongoose.model("User",userSchema)

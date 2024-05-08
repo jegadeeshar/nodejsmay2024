@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router();
 const userController= require('../controllers/usercontroller')
 const roleController=require('../controllers/rolecontroller')
+const branchController=require('../controllers/branchcontroller')
 //save user path
 /**
  * @swagger
@@ -46,6 +47,7 @@ const roleController=require('../controllers/rolecontroller')
  *              type: array
  *              items:
  *                  type: string
+ *            
  *
  *    responses:
  *      '200':
@@ -79,6 +81,51 @@ router.post('/users/v1.0/', userController.saveUser)
  *        description: role added successfully.
  */
 router.post('/roles/v1.0/',roleController.saveRole)
+
+/**
+ * @swagger
+ * /api/branches/v1.0/:
+ *  post:
+ *    description: Use to add a branch in DB
+ *    produces:
+ *      - application/json
+ *    parameters:
+ *      - in: body
+ *        name: Add branch
+ *        description: Add a branch in DB.
+ *        schema:
+ *          type: object
+ *          required:
+ *            - branchCode
+ *            - branchName
+ *            - address
+ *            - city
+ *            - state
+ *            - country
+ *            - phoneNumber
+ *          properties:
+ *            branchCode:
+ *              type: number
+ *              example: 12345
+ *            branchName:
+ *              type: string
+ *            address:
+ *              type: string
+ *            city:
+ *              type: string
+ *            state:
+ *              type: string
+ *            country:
+ *              type: string
+ *            phoneNumber:
+ *              type: integer
+ *              example: 9952032862
+ *
+ *    responses:
+ *      '200':
+ *        description: Branch added successfully.
+ */
+router.post('/branches/v1.0/',branchController.saveBranch)
 /**
  * @swagger
  * /api/users/v1.0/:
